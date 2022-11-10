@@ -19,14 +19,14 @@ EP Data Base is a CRUD platform to manage a database of logistics service provid
 EP Data Base works with the support of a MySQL database mounted on the server. It has authentication, CRUD, and smart filtering functions. The MVC pattern, together with the preparation of queries, makes requests to the DB safe and organized<br><br>
 
 <div align="center">
-  <img src="https://i.ibb.co/0BznTYv/Screen-Shot-2022-11-10-at-15-14-35.png" alt="Login interface" style="width:70%"/>
+  <img src="https://i.ibb.co/0BznTYv/Screen-Shot-2022-11-10-at-15-14-35.png" alt="Login interface" />
   <p>Login Interface</p>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://i.ibb.co/Q82WSr8/Screen-Shot-2022-11-10-at-15-17-53.png" alt="Edit or Create Interface" style="width:70%"/>
+  <img src="https://i.ibb.co/Q82WSr8/Screen-Shot-2022-11-10-at-15-17-53.png" alt="Edit or Create Interface" />
   <p>Edit or Create Interface</p>
 </div>
 
