@@ -36,5 +36,15 @@ As a result, it is a simple, user-friendly web application that is adaptable to 
 
 <br>
 
+## :placard: How to use
+
+1. Install <a href="https://www.apachefriends.org/download.html"> XAMPP </a> in the version required by your operating system.<br><br>
+2. Launch it, if you use linux maybe <a href="https://www.drupal.org/docs/develop/local-server-setup/linux-development-environments/xampp-for-linux"> this </a> will help you.<br><br>
+3. Put the project folder into the path /opt/lampp/htdocs.<br><br>
+4. Go to PHPMyAdmin panel, typing localhost in your browser searchbar, open MySQL panel and <a href="https://www.a2hosting.com/kb/developer-corner/mysql/import-and-export-a-mysql-database"> import </a> the DataBase which is in the project folder.<br><br>
+5. If you followed all the steps, you are ready to launch the project, by putting localhost/EPdatabase/index.php in your browser. You can review its code, use it and modify it as you want.<br><br>
+
+
+
 
 
