@@ -2,16 +2,13 @@
 
 require_once 'model/user.php';
 
-class UserController
-{
+class UserController{
     private $model;
     private $username;
-    public function __construct()
-    {
+    public function __construct(){
         $this->model = new User();
     }
-    public function login()
-    {
+    public function login(){
         session_start();
         $user = new User();
         $user->username=$_REQUEST['username'];
@@ -24,22 +21,18 @@ class UserController
             header("Location: index.php");
         }
     }
-    public function logout()
-    {
+    public function logout(){
         session_destroy();
         header('Location: index.php');
     }
 
-    public function indexLogin()
-    {
+    public function indexLogin(){
         require_once 'view/login.php';
     }
-    public function indexCreateLogin()
-    {
+    public function indexCreateLogin(){
         require_once 'view/create_user.php';
     }
-    public function createUser()
-    {
+    public function createUser(){
         $user = new User();
         $user->username=$_REQUEST['username'];
         $user->password=$_REQUEST['password'];
@@ -51,5 +44,3 @@ class UserController
         header('Location: index.php');
     }
 }
-
-?>

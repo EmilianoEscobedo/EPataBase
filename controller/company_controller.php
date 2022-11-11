@@ -5,32 +5,27 @@ require_once 'model/company.php';
 class CompanyController
 {
     private $model;
-    public function __construct()
-    {
+    public function __construct(){
         $this->model = new Company();
     }
-    public function indexCompany()
-    {
+    public function indexCompany(){
         require_once 'view/database.php';
     }
-    public function showById()
-    {
+    public function showById(){
         $company = new Company();
         if(isset($_REQUEST['id'])){
             $company=$this->model->getById($_REQUEST['id']);
         }
         require_once 'view/company_form.php';
     }
-    public function search()
-    {
+    public function search(){
         $company = new Company();
         $input = $_REQUEST['input'];
         $option = $_REQUEST['option'];
         $response = $company->search($option, $input);
         require_once 'view/show_results.php';
     }
-    public function save()
-    {
+    public function save(){
         $company = new Company();
         $company->id=$_REQUEST['id'];
         $company->name=$_REQUEST['name'];
@@ -47,11 +42,8 @@ class CompanyController
             $company->create();
         header('Location: index.php');
     }
-    public function quit()
-    {
+    public function quit(){
         $this->model->delete($_REQUEST['id']);
         header('Location: index.php');
     }
 }
-
-?>

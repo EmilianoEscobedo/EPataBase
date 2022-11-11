@@ -25,9 +25,3 @@ if (!isset($_REQUEST['controller']) & isset($_SESSION['username'])){
     }
 
 
-
-
-
-    
-?>
-

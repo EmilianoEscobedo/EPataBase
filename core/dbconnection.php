@@ -8,10 +8,8 @@ class Connection
     private $dbName='Companies';
     private $charset='utf8';
 
-    protected function connection()
-    {
-        try
-        {
+    protected function connection(){
+        try{
             $pdo = new PDO("{$this->driver}:
             host={$this->host};
             dbname={$this->dbName}; 
@@ -21,13 +19,8 @@ class Connection
             $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             return $pdo;
         }
-        catch(PDOException $e)
-        {
+        catch(PDOException $e){
             echo $e -> getMessage();
         }
     }
 }
-
-
-
-?>

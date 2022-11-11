@@ -7,13 +7,11 @@ abstract class Crud extends Connection
     private $table;
     private $pdo;
 
-    public function __construct($table)
-    {
+    public function __construct($table){
         $this->table=$table;
         $this->pdo=parent::connection();   
     }
-    public function getAll()
-    {
+    public function getAll(){
         try
         {
             $stm=$this->pdo->prepare("SELECT * FROM $this->table");
@@ -25,8 +23,7 @@ abstract class Crud extends Connection
             echo $e->getMessage();
         }
     }
-    public function getById($id)
-    {
+    public function getById($id){
         try
         {
             $stm=$this->pdo->prepare("SELECT * FROM  $this->table WHERE id=?");
@@ -38,8 +35,7 @@ abstract class Crud extends Connection
             echo $e->getMessage();
         }
     }
-    public function delete($id)
-    {
+    public function delete($id){
         try
         {
             $stm=$this->pdo->prepare("DELETE FROM  $this->table WHERE id=?");
@@ -53,7 +49,3 @@ abstract class Crud extends Connection
     abstract function create();
     abstract function update();
 }
-
-
-
-?>
