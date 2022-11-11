@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
   </head>
-<body style="min-width: fit-content;">
-<header class="d-flex justify-content-between align-items-center header__index-margin">
+<body>
+    <header class="d-flex justify-content-between align-items-center header__index-margin">
         <a href="index.php">
             <img src="./assets/images/logo-white.png" alt="logo" class="login__logo ms-5">
         </a>
@@ -31,7 +31,7 @@
           </li>
         </ul>
     </header>
-    <p class="text-end me-5" style="color: #BE916E;"><?php echo ucwords($_SESSION['username'])?></p>
+    <p class="text-end me-5 session__name"><?php echo ucwords($_SESSION['username'])?></p>
     <div class="container">
         <div class="row mt-5 align-items-center">
           <h1 class="text-white text-center">
@@ -39,21 +39,21 @@
           </h1>
             <div class="col-12 col-sm-5 mb-5 mt-5 text-white ">
                 <form action="index.php?controller=company&action=save" method="post" class=" mt-5 w-100 d-flex flex-column h-100 justify-content-around">
-                    <input required id="name" name="name" value="<?php echo $company->name; ?>" class="login__input"/>
+                    <input required id="name" name="name" value="<?php echo $company->name; ?>" class="all__input"/>
                     <label for="name" class="mb-4 mt-1 fw-bold">Name </label>
-                    <input required id="image" name="image" value="<?php echo $company->image; ?>" class="login__input"/>
+                    <input required id="image" name="image" value="<?php echo $company->image; ?>" class="all__input"/>
                     <label for="image" class="mb-4 mt-1 fw-bold">Image URL</label>
-                    <input required id="range" name="range" class="login__input" value="<?php echo $company->range; ?>"/>
+                    <input required id="range" name="range" class="all__input" value="<?php echo $company->range; ?>"/>
                     <label for="range" class="mb-4 mt-1 fw-bold">Range</label>
-                    <input required id="price_km" name="price_km" value="<?php echo $company->price_km; ?>" class="login__input"/>
+                    <input required id="price_km" name="price_km" value="<?php echo $company->price_km; ?>" class="all__input"/>
                     <label for="price_km" class="mb-4 mt-1 fw-bold">Km price</label>
-                    <input required id="max_weight" name="max_weight" value="<?php echo $company->max_weight; ?>" class="login__input"/>
+                    <input required id="max_weight" name="max_weight" value="<?php echo $company->max_weight; ?>" class="all__input"/>
                     <label for="max_weight" class="mb-4 mt-1 fw-bold">Max weight transportation</label>
-                    <input required id="max_width" name="max_width" value="<?php echo $company->max_width; ?>" class="login__input"/>
+                    <input required id="max_width" name="max_width" value="<?php echo $company->max_width; ?>" class="all__input"/>
                     <label for="max_width" class="mb-4 mt-1 fw-bold">Max width transportation</label>
-                    <input required id="max_height" name="max_height" value="<?php echo $company->max_height; ?>" class="login__input"/>
+                    <input required id="max_height" name="max_height" value="<?php echo $company->max_height; ?>" class="all__input"/>
                     <label for="max_height" class="mb-4 mt-1 fw-bold">Max Height transportation</label>
-                    <textarea id="comments" name="comments" class="login__input"> <?php echo $company->comments; ?> </textarea>
+                    <textarea id="comments" name="comments" class="all__input"> <?php echo $company->comments; ?> </textarea>
                     <label for="comments" class="mb-4 mt-1 fw-bold">Comments</label>
                     <input type="submit" class="btn btn-success mt-4"
                        value="Push to database" />
@@ -69,8 +69,6 @@
         </div>
         
     </div>
-
-
 
 <!-- BS Js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

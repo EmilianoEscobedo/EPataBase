@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
 </head>
-<body style="min-width: fit-content;">
+<body>
     <header>
         <a href="index.php">
             <img src="./assets/images/logo-white.png" alt="logo" class="login__logo">
@@ -24,29 +24,29 @@
     <form action="index.php?controller=user&action=createUser" class="login_form mt-5" method="post">
         <div class="row">
             <div class="col-sm-5 mt-5">
-                <input type="text" name="username" id="username" class="login__input " placeholder="New user" required>
+                <input type="text" name="username" id="username" class="all__input " placeholder="New user" required>
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-5 mt-5">
-                <input type="password" name="password" id="password" class="login__input" placeholder="New password" required>
+                <input type="password" name="password" id="password" class="all__input" placeholder="New password" required>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-5 mt-5">
-                <input type="text" name="email" id="email" class="login__input" placeholder="Your email" required>
+                <input type="text" name="email" id="email" class="all__input" placeholder="Your email" required>
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-5 mt-5">
-                <input type="text" name="name" id="name" class="login__input" placeholder="Your Name" required>
+                <input type="text" name="name" id="name" class="all__input" placeholder="Your Name" required>
             </div>   
         </div>
         <div class="row">
             <div class="col-sm-5 mt-5">
-                <input type="text" name="lastname" id="lastname" class="login__input" placeholder="Your lastname" required>
+                <input type="text" name="lastname" id="lastname" class="all__input" placeholder="Your lastname" required>
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-5 mt-5">
-                <input type="text" name="adress" id="adress" class="login__input" placeholder="Your adress" required>
+                <input type="text" name="adress" id="adress" class="all__input" placeholder="Your adress" required>
             </div>
         </div>
         <div class="row">

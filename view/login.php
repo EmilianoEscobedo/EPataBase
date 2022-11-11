@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     
 </head>
-<body style="min-width: fit-content;">
+<body>
     <header>
         <a href="index.php">
             <img src="./assets/images/logo-white.png" alt="logo" class="login__logo">
@@ -24,8 +24,8 @@
     <div class="container mt-5">
         <div class="login__container mt-5">
             <form action="index.php?controller=user&action=login" method="post" class="login__form mt-5" >
-                <input type="text" name="username" placeholder="User" class="login__input">
-                <input type="password" name="password" placeholder="Password" class="login__input">
+                <input type="text" name="username" placeholder="User" class="all__input">
+                <input type="password" name="password" placeholder="Password" class="all__input">
                 <div class="login__container-btns">
                     <button class="login__btn">
                         <a class=" text-white text-decoration-none fw-bold" href="index.php?controller=user&action=indexCreateLogin"> Sign Up</a>

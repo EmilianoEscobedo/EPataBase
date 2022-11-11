@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
 
 </head>
-<body style="min-width: fit-content;">
+<body>
     <header class="d-flex justify-content-between align-items-center header__index-margin">
         <a href="index.php">
             <img src="./assets/images/logo-white.png" alt="logo" class="login__logo ms-5">
@@ -32,10 +32,10 @@
           </li>
         </ul>
     </header>
-    <p class="text-end me-5" style="color: #BE916E;"><?php echo ucwords($_SESSION['username'])?></p>
+    <p class="text-end me-5 session__name"><?php echo ucwords($_SESSION['username'])?></p>
     <div>
       <form action="index.php?controller=company&action=search&input&option" method="post" class="text-white my-5 me-5 text-end ">
-        <input required type="text" name="input" class="login__input me-2">
+        <input required type="text" name="input" class="all__input me-2">
         <select name="option"  required class="me-3">
           <option value="" disabled selected> Filter by</option>
           <option value="name"> Name </option>
@@ -80,7 +80,7 @@
               <p class="fw-bold">Comments</p>
               <p><?php echo $company->comments; ?></p>
             </div>
-            <div class="row pb-3 mt-3" style="border-bottom: 2px solid #BE916E;">
+            <div class="row pb-3 mt-3 db__box-border">
               <div class="col-sm-12 text-end">
                 <a href="index.php?controller=company&action=showById&id=<?php echo $company->id;?>" class="btn btn-secondary"> Edit </a>
                 <a href="index.php?controller=company&action=quit&id=<?php echo $company->id;?>" class="btn btn-secondary" onclick="javascript:return confirm('Are you sure?');">Delete</a>
